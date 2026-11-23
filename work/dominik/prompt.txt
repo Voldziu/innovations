@@ -1,0 +1,178 @@
+<rola>
+Przygotowujesz business case dla polskiego startupu deep-tech na styku AI
+i ochrony środowiska.
+</rola>
+
+<kontekst>
+Pomysł powstał na warsztatach „Od nauki do startupu AI” w ramach przedmiotu
+„Innowacje i przedsiębiorczość w Sztucznej Inteligencji” (Politechnika Wrocławska).
+Reguła warsztatów: biznes ma wykorzystywać jedną technikę AI w sposób nieoczywisty,
+ale realistyczny, w wylosowanej dziedzinie.
+- Dziedzina: ekologia.
+- Technika AI: Voice AI, rozumiana szeroko jako AI przetwarzające dźwięk
+  (wykrywanie, klasyfikacja i lokalizacja źródeł dźwięku). Inne techniki mogą
+  pełnić tylko rolę pomocniczą i muszą być nazwane jako takie.
+
+Pomysł wyłoniła 7-osobowa grupa w sesji brainwritingu (metoda 5-3-5).
+
+Nazwa robocza: Słuchacz lasu.
+
+Opis: Sieć mikrofonów rozstawionych w lesie nasłuchuje otoczenia i rozpoznaje
+odgłosy zwierząt. Na tej podstawie można szacować liczebność populacji i wyznaczać
+przybliżone granice ich terytoriów. Dźwięk w lesie niesie się dalej, niż sięga
+wzrok: kamera nie wykryje zwierzęcia zasłoniętego przez drzewa, a mikrofon je
+usłyszy. System wykrywa też anomalie, takie jak odgłosy nielegalnej wycinki
+(piły, ciężki sprzęt) czy pożaru.
+
+Rozwiązywany problem: Monitorowanie kondycji i ogólnego dobrostanu lasu jest
+kosztowne i wymaga dużych nakładów pracy w terenie. Słuchacz lasu ma pozwolić
+prowadzić je w sposób ciągły, zdalny i tańszy niż obserwacja wizualna.
+
+Surowe pomysły z karty brainwritingu (hipotezy, nie ustalenia):
+1. Wykrywanie i raportowanie anomalii: piły i silniki, krzyki ludzi na terenach
+   chronionych, lawiny w górach. Zakres funkcji zależy od obszaru, w którym
+   system działa (inny dla parku górskiego, inny dla nadleśnictwa nizinnego).
+2. Montaż mikrofonów w istniejących fotopułapkach zamiast budowy osobnej sieci.
+3. Wykrywanie pożaru dźwiękiem: bezpośrednio (trzask ognia) albo pośrednio,
+   np. po odgłosach obalających się drzew i łamiących się gałęzi.
+4. Monitorowanie obecności, a nawet liczebności zwierząt na podstawie ich głosów.
+   Głosy niosą się na duże odległości, więc do pokrycia obszaru potrzeba mniej
+   odbiorników niż kamer.
+
+Każdą hipotezę z karty zweryfikuj: rozwiń, ogranicz albo odrzuć. Odrzucone wymień
+z jednozdaniowym uzasadnieniem. Nie przyjmuj żadnej za pewnik tylko dlatego,
+że jest na karcie.
+
+Celowo nie podajemy naszego planu realizacji ani składu zespołu. Twój plan
+zostanie porównany z naszym, więc ma powstać niezależnie. Zaproponuj też
+zespół potrzebny do realizacji.
+
+Rynek: Polska, horyzont 5 lat. Ekspansję zagraniczną uwzględnij tylko
+w scenariuszu optymistycznym.
+
+Odbiorcą tekstu jest prowadząca przedmiot, ekspertka AI, a nie leśnik ani
+inwestor. Tekst ma być precyzyjny i zrozumiały bez żargonu branżowego.
+Praca jest oceniana według kryteriów: oryginalność (nieoczywisty, ale
+realistyczny sposób rozwiązania), skuteczność i szansa powodzenia wdrożenia,
+jakość opisu.
+</kontekst>
+
+<zadanie>
+Przygotuj business case dla Słuchacza lasu. Skorzystaj ze skilla business-case
+(lean-pm-skills) i przejdź jego kroki: ujęcie szansy, model ekonomiczny,
+warianty alternatywne, ryzyka, złożenie dokumentu.
+
+Skill zakłada, że część danych dostarcza użytkownik (kontekst organizacji,
+walidacja założeń z finansami). Tutaj nie ma kogo zapytać: te luki wypełnij
+researchem w sieci, a gdy danych brak, przyjmij jawne założenie i oznacz je
+jako szacunek.
+
+Do struktury skilla dodaj trzy elementy zapożyczone ze skilla startup-design:
+pre-flight check na początku oraz kill criteria i scorecard z werdyktem na końcu.
+
+Część „The Ask” ze skilla zastąp częścią „Czego potrzebujemy i od kogo”:
+nie ma jednego decydenta, więc sam wskaż źródła finansowania i partnerów
+z kwotami, terminami i kamieniami milowymi.
+</zadanie>
+
+<etapy>
+Pracuj w jednym przebiegu, bez zadawania pytań, przez cztery etapy.
+
+Etap 1. Research. Szukaj w internecie danych o polskich lasach i ich
+monitoringu, kosztach obecnych metod, istniejących rozwiązaniach akustycznych,
+źródłach finansowania i przepisach. Zweryfikuj w ten sposób hipotezy z karty.
+
+Etap 2. Szkic. Napisz pełny dokument według <struktura_wyniku>, prowadząc
+się krokami skilla business-case.
+
+Etap 3. Samokrytyka. Przeczytaj szkic kolejno jako dwie osoby:
+  a) Sceptyczny inwestor: gdzie model przychodów jest naiwny, czy liczby się
+     spinają, dlaczego ten biznes się nie uda.
+  b) Nadleśniczy z 20-letnim stażem: czy to przetrwa w prawdziwym lesie
+     i w prawdziwej organizacji (sezon, serwis, kradzieże, procedury, ludzie).
+Każda osoba zgłasza 3 najpoważniejsze zarzuty. Następnie oceń szkic według
+kryteriów warsztatów i wskaż 3 elementy, które są nieoczywiste, ale realistyczne.
+Jeśli nie umiesz wskazać trzech, popraw rozwiązanie, a nie opis.
+
+Etap 4. Wersja końcowa. Do każdego zarzutu popraw tekst albo w jednym zdaniu
+uzasadnij odrzucenie. Pokaż tylko wersję końcową i aneks. Szkicu i notatek
+z researchu nie pokazuj.
+</etapy>
+
+<struktura_wyniku>
+# Słuchacz lasu: business case
+
+> Model: <nazwa i wersja> · Data: <RRRR-MM-DD> · Środowisko: aplikacja Claude,
+> wyszukiwanie w sieci · Skill: lean-pm-skills:business-case
+
+## 1. Pre-flight check
+3–5 punktów: czy istnieje dominujące rozwiązanie, czy ktoś próbował tego samego
+i upadł (dlaczego), czy jest oczywista przeszkoda prawna.
+
+## 2. Podsumowanie
+Maksymalnie pół strony: szansa w jednym zdaniu, czego potrzebujemy, główny
+wskaźnik finansowy, koszt zaniechania. Na końcu lista kluczowych założeń
+(maksymalnie 6).
+
+## 3. Kontekst strategiczny
+Problem i dowody, rynek, dlaczego teraz. Tu podsumuj weryfikację hipotez z karty:
+które rozwinięto, które ograniczono, które odrzucono i dlaczego.
+
+## 4. Proponowane rozwiązanie
+Co budujemy, jak działa (sprzęt, łączność, modele audio), proponowany zespół,
+plan realizacji w tabeli: Etap | Cel | Czas | Koszt | Kryterium przejścia.
+
+## 5. Model finansowy
+Pięć lat, przepływy rok po roku, NPV (stopę dyskontową przyjmij i uzasadnij
+jednym zdaniem), IRR, okres zwrotu, próg rentowności. Trzy scenariusze:
+konserwatywny, bazowy (tylko Polska), optymistyczny (z ekspansją zagraniczną
+i akapitem o pierwszym kraju i powodzie wyboru). Wrażliwość: co się dzieje
+przy kosztach wyższych o 50% i przychodach niższych o 30%.
+
+## 6. Warianty alternatywne
+Tabela porównująca co najmniej: nic nie robimy (status quo obecnego
+monitoringu), wersję okrojoną, alternatywne podejście do tego samego problemu
+(np. kamery, satelity, drony) i nasze rozwiązanie. Kryteria: NPV, czas do
+efektu, ryzyko, dopasowanie do problemu, odwracalność. Rekomendacja i powód.
+
+## 7. Ryzyka
+Tabela: Ryzyko | Prawdopodobieństwo | Wpływ | Sposób ograniczenia | Kto odpowiada.
+Uwzględnij ryzyka techniczne, rynkowe, finansowe, prawne (RODO przy przypadkowym
+nagraniu ludzi, ochrona przyrody, zgody na montaż) i organizacyjne.
+
+## 8. Czego potrzebujemy i od kogo
+Źródła finansowania i partnerzy, kwoty, terminy, kamienie milowe, po których
+sprawdzamy, czy projekt działa.
+
+## 9. Kill criteria
+5–7 mierzalnych warunków, przy których przerywamy lub zmieniamy kierunek,
+każdy powiązany z etapem z planu realizacji.
+
+## 10. Scorecard
+Tabela: Wymiar | Ocena 1–10 | Uzasadnienie. Wymiary: oryginalność, wykonalność
+techniczna, popyt i płatnik, ekonomia, ryzyko prawne i regulacyjne, zespół
+i realizacja. W wymiarze oryginalności wymień 3 elementy nieoczywiste, ale
+realistyczne. Na końcu jednoznaczny werdykt: kontynuować / kontynuować
+warunkowo (pod jakimi warunkami) / zawrócić.
+
+## Źródła
+Numerowana lista. W tekście odwołania w formie [1], [2].
+
+## Aneks: co zmieniłem po samokrytyce
+Tabela: Perspektywa | Zarzut | Co zmieniono albo dlaczego odrzucono.
+</struktura_wyniku>
+
+<zasady>
+- Każda liczba ma oznaczenie [fakt, źródło] albo [szacunek: uzasadnienie].
+  Nie wymyślaj źródeł. Jeśli źródła nie ma, piszesz „szacunek”.
+- Słabe punkty pomysłu nazywaj wprost; nie łagodź werdyktu.
+- Voice AI jest główną techniką. Inne techniki tylko pomocniczo i nazwane
+  jako takie.
+- Część główna (sekcje 1–10) ma maksymalnie 2500 słów. Źródła i aneks
+  się nie wliczają. Każde zdanie ma nieść informację.
+- Język polski. Skróty i terminy branżowe wyjaśnij przy pierwszym użyciu.
+- Markdown: nagłówki dokładnie jak w <struktura_wyniku>, proste tabele
+  i listy, bez HTML i bez emoji, żeby dało się wkleić do Worda.
+- Nie zadawaj pytań. Gdy coś jest niejasne, przyjmij rozsądne założenie
+  i dopisz je do listy założeń w sekcji 2.
+</zasady>
