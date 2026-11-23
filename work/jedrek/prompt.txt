@@ -1,35 +1,48 @@
-Jesteś product managerem z doświadczeniem w produktach opartych na AI przetwarzającym dźwięk. Pomagasz nam wybrać i zaprojektować jeden produkt.
+Jesteś product managerem z doświadczeniem w produktach opartych na AI przetwarzającym dźwięk. Masz ocenić i poprawić nasz pomysł oraz nasz plan jego realizacji.
 
-Budujemy startup w obszarze ekologii. Jedyną techniką AI, na której opiera się produkt, jest Voice AI w szerokim sensie: AI, które słucha i analizuje dźwięk (rozpoznaje, klasyfikuje, lokalizuje źródło) albo generuje mowę lub dźwięk. Inne techniki, np. analiza obrazu, mogą być najwyżej dodatkiem i nie mogą być rdzeniem produktu. Szukamy zastosowania nieoczywistego, ale realistycznego: takiego, którego nikt jeszcze dobrze nie robi, a które da się zbudować dzisiejszą technologią. Mamy kilkuosobowy zespół, który zna uczenie maszynowe, ale nie ma dużego kapitału. Pierwszy pilotaż ma ruszyć w ciągu roku, a rynek startowy to Polska.
+Budujemy startup w obszarze ekologii. Jedyną techniką AI, na której opiera się produkt, jest Voice AI w szerokim sensie: AI, które słucha i analizuje dźwięk (rozpoznaje, klasyfikuje, lokalizuje źródło) albo generuje mowę lub dźwięk. Inne techniki, np. analiza obrazu, mogą być najwyżej dodatkiem. Zależy nam na zastosowaniu nieoczywistym, ale realistycznym. Mamy kilkuosobowy zespół, który zna uczenie maszynowe, ale nie ma dużego kapitału. Rynek startowy to Polska.
 
-Zadanie ma trzy części.
+Problem: monitorowanie kondycji i dobrostanu lasu jest kosztowne i wymaga dużo pracy w terenie.
 
-1. Kierunki. Zaproponuj pięć różnych kierunków. Każdy opisz w 2–3 zdaniach: co słuchamy, gdzie i dla kogo. Każdy ma dotyczyć innego problemu ekologicznego, a przynajmniej jeden ma wykorzystywać generowanie mowy lub dźwięku, a nie tylko słuchanie. Jeśli pierwszy pomysł, który przyszedł ci do głowy, jest oczywisty, odrzuć go i napisz, jaki był.
+Nasz pomysł, Słuchacz lasu: sieć mikrofonów rozstawionych w lesie nasłuchuje otoczenia i rozpoznaje odgłosy zwierząt. Na tej podstawie szacujemy liczebność populacji i przybliżone granice ich terytoriów. Dźwięk w lesie niesie się dalej, niż sięga wzrok, więc mikrofon usłyszy zwierzę, którego kamera nie zobaczy za drzewami. System wykrywa też anomalie, takie jak odgłosy nielegalnej wycinki (piły, ciężki sprzęt) i pożaru.
 
-2. Wybór. Oceń kierunki w tabeli: nieoczywistość (1–5), wykonalność pilotażu w rok (1–5), szansa, że ktoś za to zapłaci (1–5), czy dźwięk daje tu coś, czego nie da kamera ani człowiek (tak/nie i dlaczego), oraz kto już to robi (firma, projekt albo badania, a jeśli nie wiesz, napisz „nie wiem”). Wybierz jeden kierunek i uzasadnij wybór w trzech zdaniach. Nie wybieraj kierunku, który gdzieś na świecie jest już gotowym produktem, jeśli nasz jedyny wkład to przeniesienie go do Polski.
+Nasz plan realizacji:
+1. Rozmawiamy z leśnikami i pracownikami parku narodowego, żeby dowiedzieć się, jak dziś liczą zwierzęta i wykrywają nielegalną wycinkę oraz pożary i ile ich to kosztuje.
+2. Zbieramy nagrania z lasu z publicznych baz odgłosów zwierząt i z własnych nagrań, a potem oznaczamy na nich głosy zwierząt, piły i odgłosy ognia.
+3. Trenujemy model rozpoznający dźwięki, zaczynając od kilku popularnych gatunków i odgłosu piły łańcuchowej.
+4. Budujemy prototyp czujnika: mikrofon, mały komputer, bateria z panelem słonecznym i wodoodporna obudowa.
+5. Testujemy kilka czujników na małym kawałku lasu i sprawdzamy, jak daleko słyszą mikrofony i ile jest fałszywych alarmów.
+6. Robimy aplikację z mapą, na której widać wykryte zwierzęta, a leśniczy dostaje powiadomienie o wycince lub pożarze.
+7. Przeprowadzamy pilotaż w wybranym nadleśnictwie lub parku narodowym przez jeden sezon i porównujemy wyniki z tradycyjnym liczeniem zwierząt.
+8. Staramy się o finansowanie wdrożenia przez Lasy Państwowe, które i tak wydają pieniądze na monitoring lasu i ochronę przeciwpożarową, a dodatkowo o granty na ochronę środowiska.
+9. Załatwiamy zgody na montaż czujników i rozwiązujemy problem nagrywania ludzi (RODO), np. przez automatyczne usuwanie fragmentów z mową.
+10. Rozszerzamy system na kolejne nadleśnictwa i sprzedajemy go jako abonament obejmujący czujniki, serwis i aplikację.
 
-3. Projekt wybranego produktu:
-- problem i klient: konkretny typ klienta i to, kto u niego decyduje o zakupie,
-- efekt dla przyrody: jaką konkretną szkodę w środowisku produkt ogranicza i jaką miarą sprawdzimy w pilotażu, że ją ogranicza (sama oszczędność pieniędzy klienta nie wystarczy),
-- jak to działa: co i gdzie nagrywamy, co robi model, co dostaje użytkownik,
-- co już istnieje: jakie rozwiązania lub badania są najbliżej tego pomysłu, dlaczego nie stały się jeszcze produktem w Polsce i co konkretnie robimy inaczej,
-- scenariusz użycia: krok po kroku, co dzieje się od zdarzenia w terenie do decyzji użytkownika, bez wymyślonych postaci i imion,
-- plan realizacji: kolejne kroki od pierwszych rozmów z klientami, przez prototyp i pilotaż, do skalowania, z orientacyjnym czasem każdego kroku i warunkiem, który musi być spełniony, żeby przejść do następnego (oraz co robimy, jeśli nie jest),
-- model przychodu: kto płaci, za co i w jakiej formie,
-- trzy największe ryzyka i dla każdego najtańszy test, który je sprawdzi, zanim wydamy pieniądze na sprzęt.
+Zostajemy przy tym pomyśle. Nie zamieniaj go na inny produkt, ale możesz zmienić jego zakres, kolejność modułów i pierwszego klienta.
 
-Pisz konkretnie. Zdanie „system wykrywa zagrożenia” jest za ogólne: napisz, jakie zagrożenia, jak je wykrywa i z jaką skutecznością można realnie liczyć. Nie zmyślaj danych ani źródeł, a każdą liczbę bez źródła oznacz jako [szacunek]. Jeśli czegoś nie wiesz, napisz to wprost.
+Zadanie ma pięć części. Zanim zaczniesz, wypisz w kilku punktach założenia, które przyjmujesz tam, gdzie czegoś nie wiesz (np. jak nadleśnictwa kupują usługi).
+
+1. Co już istnieje. Jakie rozwiązania i badania są najbliżej naszego pomysłu (firmy, projekty, narzędzia). Co w Słuchaczu lasu jest naprawdę nowe, a co już ktoś robi. Jeśli nowego jest za mało, zaproponuj, jak przesunąć pomysł, żeby był nieoczywisty, ale nadal był Słuchaczem lasu.
+
+2. Pre-mortem. Załóż, że jest trzy lata później i projekt upadł. Podaj pięć najbardziej prawdopodobnych przyczyn, od najpoważniejszej. Przy każdej wskaż, który krok naszego planu jej nie przewidział albo ją spowodował.
+
+3. Ocena naszego planu. Dla każdego z 10 kroków napisz jednym lub dwoma zdaniami: zostawić, zmienić (jak) albo usunąć (dlaczego). Krok jest dobry, jeśli ma mierzalny wynik, da się go wykonać tanio i przybliża nas do pierwszego płacącego klienta. Na końcu wypisz, czego w planie brakuje.
+
+4. Poprawiony plan. Rozpisz go w tabeli: krok, orientacyjny czas, warunek, który musi być spełniony, żeby przejść dalej, oraz co robimy, jeśli nie jest spełniony. Dodaj, jaką konkretną szkodę w przyrodzie produkt ogranicza i jaką miarą sprawdzimy to w pilotażu.
+
+5. Trzy najtańsze testy. Wskaż trzy założenia, od których wszystko zależy, i dla każdego najtańszy test, który je sprawdzi, zanim wydamy pieniądze na sprzęt.
+
+Pisz konkretnie. Zdanie „system wykrywa zagrożenia” jest za ogólne: napisz, jakie zagrożenia, jak je wykrywa i z jaką skutecznością można realnie liczyć. Fakty, firmy, liczby i przepisy sprawdzaj w internecie i podawaj źródło w formie [1], [2] z listą adresów na końcu. Nie zmyślaj danych ani źródeł, a każdą liczbę bez źródła oznacz jako [szacunek]. Jeśli czegoś nie wiesz, napisz to wprost. Nie wymyślaj postaci ani imion.
+
+Zanim oddasz odpowiedź, sprawdź, czy każdy z 10 kroków ma werdykt, czy każda przyczyna z pre-mortem wskazuje konkretny krok planu i czy każda liczba ma źródło albo oznaczenie [szacunek].
 
 Odpowiedź trafi bez poprawek do naszego dokumentu. Pisz po polsku, w Markdownie, bez HTML i emoji, w około 1500 słowach. Użyj takich nagłówków:
 
-# <nazwa produktu>
-## 1. Pięć kierunków
-## 2. Wybór
-## 3. Problem i klient
-## 4. Efekt dla przyrody
-## 5. Jak to działa
-## 6. Co już istnieje
-## 7. Scenariusz użycia
-## 8. Plan realizacji
-## 9. Model przychodu
-## 10. Ryzyka i jak je tanio sprawdzić
+# Słuchacz lasu: ocena i poprawiony plan
+## Założenia
+## 1. Co już istnieje
+## 2. Pre-mortem
+## 3. Ocena naszego planu
+## 4. Poprawiony plan
+## 5. Trzy najtańsze testy
+## Źródła
