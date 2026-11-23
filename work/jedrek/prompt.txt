@@ -1,0 +1,35 @@
+Jesteś product managerem z doświadczeniem w produktach opartych na AI przetwarzającym dźwięk. Pomagasz nam wybrać i zaprojektować jeden produkt.
+
+Budujemy startup w obszarze ekologii. Jedyną techniką AI, na której opiera się produkt, jest Voice AI w szerokim sensie: AI, które słucha i analizuje dźwięk (rozpoznaje, klasyfikuje, lokalizuje źródło) albo generuje mowę lub dźwięk. Inne techniki, np. analiza obrazu, mogą być najwyżej dodatkiem i nie mogą być rdzeniem produktu. Szukamy zastosowania nieoczywistego, ale realistycznego: takiego, którego nikt jeszcze dobrze nie robi, a które da się zbudować dzisiejszą technologią. Mamy kilkuosobowy zespół, który zna uczenie maszynowe, ale nie ma dużego kapitału. Pierwszy pilotaż ma ruszyć w ciągu roku, a rynek startowy to Polska.
+
+Zadanie ma trzy części.
+
+1. Kierunki. Zaproponuj pięć różnych kierunków. Każdy opisz w 2–3 zdaniach: co słuchamy, gdzie i dla kogo. Każdy ma dotyczyć innego problemu ekologicznego, a przynajmniej jeden ma wykorzystywać generowanie mowy lub dźwięku, a nie tylko słuchanie. Jeśli pierwszy pomysł, który przyszedł ci do głowy, jest oczywisty, odrzuć go i napisz, jaki był.
+
+2. Wybór. Oceń kierunki w tabeli: nieoczywistość (1–5), wykonalność pilotażu w rok (1–5), szansa, że ktoś za to zapłaci (1–5), czy dźwięk daje tu coś, czego nie da kamera ani człowiek (tak/nie i dlaczego), oraz kto już to robi (firma, projekt albo badania, a jeśli nie wiesz, napisz „nie wiem”). Wybierz jeden kierunek i uzasadnij wybór w trzech zdaniach. Nie wybieraj kierunku, który gdzieś na świecie jest już gotowym produktem, jeśli nasz jedyny wkład to przeniesienie go do Polski.
+
+3. Projekt wybranego produktu:
+- problem i klient: konkretny typ klienta i to, kto u niego decyduje o zakupie,
+- efekt dla przyrody: jaką konkretną szkodę w środowisku produkt ogranicza i jaką miarą sprawdzimy w pilotażu, że ją ogranicza (sama oszczędność pieniędzy klienta nie wystarczy),
+- jak to działa: co i gdzie nagrywamy, co robi model, co dostaje użytkownik,
+- co już istnieje: jakie rozwiązania lub badania są najbliżej tego pomysłu, dlaczego nie stały się jeszcze produktem w Polsce i co konkretnie robimy inaczej,
+- scenariusz użycia: krok po kroku, co dzieje się od zdarzenia w terenie do decyzji użytkownika, bez wymyślonych postaci i imion,
+- plan realizacji: kolejne kroki od pierwszych rozmów z klientami, przez prototyp i pilotaż, do skalowania, z orientacyjnym czasem każdego kroku i warunkiem, który musi być spełniony, żeby przejść do następnego (oraz co robimy, jeśli nie jest),
+- model przychodu: kto płaci, za co i w jakiej formie,
+- trzy największe ryzyka i dla każdego najtańszy test, który je sprawdzi, zanim wydamy pieniądze na sprzęt.
+
+Pisz konkretnie. Zdanie „system wykrywa zagrożenia” jest za ogólne: napisz, jakie zagrożenia, jak je wykrywa i z jaką skutecznością można realnie liczyć. Nie zmyślaj danych ani źródeł, a każdą liczbę bez źródła oznacz jako [szacunek]. Jeśli czegoś nie wiesz, napisz to wprost.
+
+Odpowiedź trafi bez poprawek do naszego dokumentu. Pisz po polsku, w Markdownie, bez HTML i emoji, w około 1500 słowach. Użyj takich nagłówków:
+
+# <nazwa produktu>
+## 1. Pięć kierunków
+## 2. Wybór
+## 3. Problem i klient
+## 4. Efekt dla przyrody
+## 5. Jak to działa
+## 6. Co już istnieje
+## 7. Scenariusz użycia
+## 8. Plan realizacji
+## 9. Model przychodu
+## 10. Ryzyka i jak je tanio sprawdzić
