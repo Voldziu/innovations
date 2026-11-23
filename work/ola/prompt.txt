@@ -1,0 +1,76 @@
+Wciel się w rolę Product Managera i współtwórcy startupu Słuchacz Lasu. Jesteś odpowiedzialny za zaprojektowanie produktu, wybór technologii, strategię biznesową i doprowadzenie projektu do działającego MVP.
+
+Główna idea
+
+Tworzymy startup wykorzystujący Voice AI jako podstawę całego produktu. System będzie monitorował polskie lasy za pomocą mikrofonów i sztucznej inteligencji analizującej dźwięki.
+
+AI ma rozpoznawać dźwięki zwierząt, aktywność człowieka, hałas i inne istotne zjawiska akustyczne. System powinien wykrywać określone zdarzenia, analizować zmiany i przekazywać klientom przydatne informacje i alerty.
+Voice AI nie może być dodatkiem do zwykłego monitoringu. To główna technologia i wartość naszego produktu.
+
+1. Problemy i możliwości
+
+Wskaż minimum 4 problemy polskich lasów, które można monitorować akustycznie: utrata bioróżnorodności i zmiany aktywności zwierząt, zagrożenia środowiskowe, nielegalna działalność człowieka i hałas.
+Wyjaśnij, jakie dźwięki można analizować, jak wykorzystamy AI, jakie korzyści przyniesie system i kto może być zainteresowany jego zakupem.
+
+2. Projekt produktu
+
+Zaproponuj 3 możliwe koncepcje produktu oparte na Voice AI. Dla każdej przedstaw funkcje, technologie, sprzęt, klientów, koszty, zalety i ograniczenia.
+
+Przeanalizuj konkurencję z Polski i zagranicy. Wybierz jeden pomysł, który ma największy potencjał biznesowy i jest możliwy do zrealizowania przez startup.
+
+3. Technologia Voice AI
+
+Szczegółowo opisz:
+
+jakie modele AI i algorytmy wykorzystamy;
+jak będzie wyglądało rozpoznawanie i klasyfikowanie dźwięków;
+czy użyjemy gotowych modeli, czy własnych;
+jak ograniczymy błędne rozpoznania. 
+
+Wskaż konkretne, dostępne technologie i narzędzia. Nie proponuj niepotrzebnie kosztownego trenowania modeli od zera.
+
+4. Urządzenie i infrastruktura
+
+Zaprojektuj urządzenie do montażu w lesie. Opisz odporność na polskie warunki terenowe, wilgoć, mróz, upały, deszcz i śnieg. Podaj przykładowe komponenty, ceny, zużycie energii i koszty utrzymania. Własne wyliczenia konkretnie oznacz.
+
+5. MVP i plan działania
+
+Przygotuj realistyczny harmonogram:
+
+walidacja potrzeb klientów;
+zebranie nagrań;
+przygotowanie modelu AI;
+budowa prototypu;
+stworzenie oprogramowania;
+testy terenowe;
+pierwszy pilotaż.
+
+Podaj czas, koszty i rezultaty każdego etapu. Określ minimalny zespół potrzebny do realizacji projektu oraz całkowity budżet MVP.
+
+6. Biznes i klienci
+
+Wskaż najbardziej perspektywicznego pierwszego klienta w Polsce. Rozważ Lasy Państwowe, parki narodowe, instytucje naukowe, samorządy i organizacje ekologiczne.
+
+Wyjaśnij, kto podejmie decyzję zakupową, jaki problem rozwiązujemy i dlaczego klient miałby zapłacić. Zaproponuj model przychodów: sprzedaż urządzeń, monitoring jako usługa i raporty.
+
+7. Ryzyka i rekomendacja
+
+Wskaż 3 największe ryzyka technologiczne i biznesowe, które należy tanio zweryfikować przed rozpoczęciem kosztownego rozwoju.
+
+Na koniec podejmij decyzję jako Product Manager:
+
+Co dokładnie budujemy?
+Dlaczego potrzebujemy Voice AI?
+Kto za to zapłaci?
+Jak będzie działał produkt?
+Ile kosztuje MVP i ile potrwa jego stworzenie?
+Co znajdzie się w pierwszej wersji, a z czego rezygnujemy?
+Jak zdobędziemy pierwszego klienta?
+Jak zmierzymy sukces pilotażu?
+Zasady
+
+Pisz po polsku i skupiaj się wyłącznie na Polsce. Korzystaj z aktualnych badań, dokumentacji technicznej i wiarygodnych źródeł z bezpośrednimi linkami. Oddzielaj fakty od założeń i oznaczaj własne szacunki. Nie wymyślaj danych, cen ani parametrów. Krytycznie oceniaj rentowność i wykonalność.
+
+Myśl jak Product Manager budujący prawdziwy startup. Naszym celem nie jest stworzenie futurystycznej wizji, ale konkretnego, możliwego do zbudowania i sprzedania produktu, w którym Voice AI jest kluczową technologią.
+
+Odpowiedź przygotuj w formacie Markdown (.md), w postaci profesjonalnego dokumentu analityczno-biznesowego, który będzie można wykorzystać jako podstawę do rzeczywistego uruchomienia startupu. Każde istotne twierdzenie popieraj wiarygodnym źródłem i bezpośrednim linkiem. Unikaj ogólników. 
