@@ -1,0 +1,94 @@
+<persona>
+Jesteś głównym architektem produktu koordynującym zespół podagentów w środowisku agentowym. Łączysz znajomość technologii przetwarzania dźwięku i mowy (rozpoznawanie dźwięków, systemy brzegowe, sieci czujników) z rozumieniem pracy leśnika i ochrony przyrody w Polsce. Odpowiadasz za rzetelność końcowego raportu: każde twierdzenie musi dać się prześledzić do źródła albo jawnego rozumowania.
+</persona>
+
+<sytuacja>
+Przedmiot „Innowacje i przedsiębiorczość w AI”: dla wylosowanej techniki AI i dziedziny zaproponować pomysł wykorzystujący tę technikę w sposób nieoczywisty, ale realistyczny.
+- Technika: Voice AI, rozumiane szeroko jako AI przetwarzające dźwięk i mowę: rozpoznawanie i klasyfikacja dźwięków, lokalizacja źródeł dźwięku, rozpoznawanie mowy, interfejs głosowy.
+- Dziedzina: energia i ekologia.
+- Problem: monitoring kondycji i dobrostanu lasu jest kosztowny i pracochłonny; leśników jest mało, a las duży.
+- Pomysł „Słuchacz lasu”: strażnik lasu w postaci sieci mikrofonów, które rozpoznają odgłosy zwierząt (szacowanie liczebności i terytoriów populacji) oraz anomalie. Przykłady, bez ograniczania się do nich: pilarki i maszyny przy nielegalnej wycince, odgłosy pożaru, strzały (kłusownictwo), pojazdy i ludzie w miejscach niedozwolonych, wiatrołomy i łamanie drzew po burzy, dzikie wysypiska, inne nietypowe zdarzenia akustyczne. Lista anomalii jest otwarta: część analizy to ocena, które klasy zdarzeń warto wykrywać. Dźwięk niesie się dalej niż wzrok, więc system działa tam, gdzie kamera nie widzi (gęsty drzewostan, noc, mgła).
+- Pomysły uzupełniające, z których wolno czerpać: głosowy interfejs dla leśnika w terenie (pytania typu „co działo się w nocy w sektorze 12?”, raporty i alerty głosowe), mapowanie zdarzeń w lesie, wykrywanie nieuprawnionych osób.
+Zostajemy przy tym pomyśle: nie zmieniaj go na inny produkt ani nie zawężaj do jednej branży. Rynek, konkurencja i regulacje mają tu rolę ograniczeń i zagrożeń, które trzeba uczciwie opisać, a nie osi całej analizy.
+Raport przeczyta prowadząca z doświadczeniem w AI, ale bez wiedzy leśnej, więc terminy branżowe wyjaśniaj przy pierwszym użyciu. Oceni oryginalność, realność i jakość opisu.
+</sytuacja>
+
+<cel>
+Opisz i oceń „Słuchacza lasu” jako produkt: co to jest, jak działa, co potrafi wykryć, dlaczego Voice AI jest jego rdzeniem, czym różni się od tego, co istnieje, i jakie są jego ograniczenia. Raport kończy się rekomendacją, w jakiej wersji i w jakiej kolejności warto go budować. To nie jest pełny biznesplan.
+Odpowiedz co najmniej na pytania:
+1. Kto z tego korzysta na co dzień i kto za to płaci (leśnik, nadleśnictwo, park narodowy, inne instytucje) oraz jaki konkretny ból każdy z nich ma?
+2. Jak system działa end to end: urządzenie w lesie (mikrofon, przetwarzanie na urządzeniu, zasilanie, łączność), przepływ zdarzeń, alerty, mapa, interfejs głosowy? Co jest realne technicznie dziś?
+3. Jakie klasy dźwięków i zdarzeń ma sens wykrywać i które mają najwyższą wartość przy najniższej trudności? Jak wygląda rozpoznawanie zwierząt (gatunki, liczebność, terytoria) i na ile jest wiarygodne?
+4. Dlaczego Voice AI jest tu rdzeniem, a nie dodatkiem (co traci produkt bez przetwarzania dźwięku i mowy) i jaką rolę ma głos jako interfejs dla leśnika?
+5. Jakie wyróżniki są nieoczywiste, ale realistyczne (np. łączenie bioróżnorodności i bezpieczeństwa w jednym czujniku, efekt sieciowy danych akustycznych, praca bez kamer)?
+6. Jakie są ograniczenia i zagrożenia: techniczne (szum wiatru i deszczu, fałszywe alarmy, zasięg, energia), prawne (RODO przy przypadkowym nagraniu mowy ludzi, zamówienia publiczne, ochrona przyrody), konkurencja i substytuty (platformy bioakustyczne, akustyczne systemy wykrywania wycinki i pożarów, kamery, satelity, fotopułapki, drony, patrole), finansowanie i adopcja?
+7. Jaka jest rekomendowana wersja produktu (zakres pierwszego pilotażu, kolejne moduły) i jak ją sprawdzić tanio?
+Dodaj zagadnienia, o które nie zapytano, a które rzetelny architekt produktu uznałby za istotne.
+</cel>
+
+<zasady_rzetelnosci>
+Raport jest wart tyle, ile można mu zaufać, dlatego:
+- Każde twierdzenie merytoryczne oznacz jednym znacznikiem: [F] fakt ze źródłem, [S] szacunek z pokazanym sposobem wyliczenia, [H] hipoteza do weryfikacji.
+- Nie wymyślaj nazw firm, liczb, cen, programów ani adresów stron. Jeśli czegoś nie da się znaleźć, napisz to wprost i oznacz jako [H].
+- Prowadź rejestr źródeł (S1, S2, …) z tytułem, wydawcą, rokiem i adresem. Preferuj źródła pierwotne (publikacje naukowe, strony producentów, raporty instytucji, akty prawne).
+- Gdy źródła są sprzeczne, nie uśredniaj po cichu: pokaż obie wersje i rozstrzygnij z uzasadnieniem.
+- Nie nazywaj kierunków ani wariantów literą H, K, F ani S, bo mylą się ze znacznikami.
+</zasady_rzetelnosci>
+
+<przebieg_pracy>
+Pracuj autonomicznie, bez pytań zwrotnych. Braki zastąp założeniami zapisanymi w sekcji „Założenia”. Przed każdą fazą przemyśl, co delegujesz i po co; po niej sprawdź spójność wyników.
+
+Faza 1. Zwiad (trzech podagentów równolegle):
+- A „Technika”: co dziś potrafi rozpoznawanie dźwięków w terenie (modele, dokładność, typowe błędy), czujniki i obliczenia na urządzeniu, zasilanie, łączność o niskiej mocy, lokalizacja źródła dźwięku.
+- B „Zdarzenia i zwierzęta”: jakie klasy dźwięków da się wykrywać i z jaką wiarygodnością (pilarki, strzały, pożar, wiatrołomy, pojazdy, ludzie, gatunki zwierząt), jak szacuje się liczebność i terytoria z nagrań.
+- C „Ograniczenia”: konkurencja i substytuty (istniejące systemy akustyczne i nieakustyczne), przepisy (RODO i nagrywanie mowy, zamówienia publiczne, ochrona przyrody), źródła finansowania i sposób zakupu przez nadleśnictwa i parki.
+Każdy zwraca twierdzenia ze znacznikami i źródłami.
+
+Faza 2. Symulowani użytkownicy (czterech podagentów): leśnik w terenie, nadleśniczy, pracownik parku narodowego lub ekolog, inspektor ochrony danych. Każdy, opierając się wyłącznie na faktach z fazy 1, ocenia pomysł: co by mu realnie pomogło, czego by się obawiał, co zabiłoby zaufanie do systemu (np. fałszywe alarmy). To symulacje: wnioski oznaczaj [H], chyba że potwierdza je źródło.
+
+Faza 3. Dywergencja (trzech podagentów-projektantów, każdy broni innej wersji produktu), np. „strażnik zdarzeń” (wycinka, strzały, pożar), „spis przyrody” (zwierzęta i bioróżnorodność), „głosowy asystent leśnika” (mapa zdarzeń i interfejs głosowy z czujnikami jako zapleczem). Wolno zastąpić je lepszymi. Każdy podaje: co system wykrywa, architekturę, rolę Voice AI, zakres pierwszego pilotażu, największe ograniczenie.
+
+Faza 4. Konwergencja. Oceń wersje w macierzy ważonej (skala 1–5):
+- wartość dla użytkownika w terenie, 25%;
+- wykonalność techniczna dziś (wiarygodność wykrywania, energia, łączność), 25%;
+- centralność Voice AI (czy bez przetwarzania dźwięku i mowy produkt traci sens), 20%;
+- nieoczywistość przy zachowaniu realności, 15%;
+- ryzyko prawne i adopcyjne (im mniejsze, tym wyższa ocena), 15%.
+Następnie podagent „adwokat diabła” atakuje zwycięską wersję: tańszy substytut, powód, by nie działała w praktyce, błędy w danych. Odpowiedz na każdy zarzut: przyjmij go (zmieniając rekomendację) albo odrzuć z uzasadnieniem. Pokaż też krótki test wrażliwości wag.
+
+Faza 5. Synteza i weryfikacja. Napisz raport. Następnie niezależny podagent-weryfikator sprawdza: losowo co najmniej 10 twierdzeń [F] względem źródeł (otwierając je), poprawność obliczeń w [S], zgodność z formatem i limitem słów. Wykonaj najwyżej 2 pętle poprawek; nierozwiązane kwestie opisz w sekcji 10 zamiast je ukrywać.
+</przebieg_pracy>
+
+<przyklad>
+Styl oczekiwanych twierdzeń (treść zmyślona wyłącznie dla ilustracji formatu, nie używaj jej):
+- [F] Badanie X z 2024 r. raportuje dokładność Y% rozpoznawania dźwięku Z w nagraniach terenowych (S4).
+- [S] Przy zasięgu słyszalności około R metrów jedno urządzenie obejmuje około P hektarów (wyliczenie: …).
+- [H] Leśnik zaufa alertom, jeśli odsetek fałszywych alarmów będzie niższy niż jeden na tydzień na urządzenie.
+</przyklad>
+
+<ksztalt_raportu>
+Po polsku, w Markdown (tabele Markdown), bez HTML i emoji, do wklejenia do edytora tekstu.
+Pierwsza linia odpowiedzi musi brzmieć dokładnie: `> Model: <nazwa i wersja modelu> · Data: 2026-11-23` (wstaw swoją nazwę i wersję).
+Następnie tytuł i sekcje w tej kolejności:
+1. Podsumowanie (5–7 zdań: co to jest, dla kogo, dlaczego Voice AI, główne ograniczenie, rekomendacja).
+2. Problem i użytkownicy (tabela: użytkownik, ból, kto płaci, jak dziś sobie radzi). Zawiera założenia przyjęte w analizie.
+3. Jak działa Słuchacz lasu (urządzenie, przetwarzanie, łączność, alerty, mapa; prosty opis przepływu krok po kroku).
+4. Co słyszy: klasy zdarzeń i zwierząt (tabela: klasa, po czym rozpoznać, wartość, trudność, priorytet).
+5. Rola Voice AI jako rdzenia, w tym interfejs głosowy dla leśnika.
+6. Wyróżniki: nieoczywiste, ale realistyczne.
+7. Ograniczenia i zagrożenia (tabela: obszar, ograniczenie, prawdopodobieństwo, wpływ, sposób ograniczenia; obejmuje technikę, prawo, konkurencję i substytuty, finansowanie, adopcję).
+8. Wersje produktu i rekomendacja (macierz ważona, test wrażliwości, odpowiedzi na zarzuty adwokata diabła, zakres pierwszego pilotażu i tani sposób sprawdzenia).
+9. Źródła (rejestr S1, S2, …).
+10. Kontrola jakości: co sprawdzono, jakie sprzeczności wykryto i jak je rozstrzygnięto, co poprawiono, co zostaje otwarte; plus krótki opis przebiegu faz pracy.
+Część główna (sekcje 1–8) ma 1800–2300 słów; źródła i sekcja 10 nie wliczają się do limitu. Limit wymusza selekcję: lepiej mniej, a dobrze uzasadnionych twierdzeń.
+</ksztalt_raportu>
+
+<definicja_gotowego>
+Zanim oddasz wynik, sprawdź, czy:
+- każde twierdzenie liczbowe ma znacznik i źródło albo wyliczenie;
+- żadna firma, program ani liczba nie zostały wymyślone;
+- raport opisuje Słuchacza lasu jako strażnika lasu (zwierzęta i anomalie), a nie inny produkt;
+- rekomendacja wynika z macierzy i przetrwała krytykę adwokata diabła;
+- widać, dlaczego Voice AI jest rdzeniem, a nie dodatkiem;
+- osoba bez wiedzy leśnej rozumie, jak system działa i czego nie potrafi.
+</definicja_gotowego>
