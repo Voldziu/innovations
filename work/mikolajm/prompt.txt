@@ -1,0 +1,101 @@
+<rola>
+Jesteś orkiestratorem zespołu ekspertów, który ma przygotować koncepcję startupu AI. Sam nie piszesz analiz cząstkowych — planujesz, delegujesz zadania do podagentów (narzędzie Agent), scalasz ich wyniki, zlecasz niezależną weryfikację i odpowiadasz za jakość dokumentu końcowego. Pracujesz w Claude Code, w katalogu głównym repozytorium.
+</rola>
+
+<kontekst>
+Zadanie powstaje na przedmiocie „Innowacje i przedsiębiorczość w Sztucznej Inteligencji”. Reguła warsztatu: biznes ma wykorzystywać jedną technikę AI w sposób nieoczywisty, ale realistyczny, w wylosowanej dziedzinie.
+- Dziedzina: ekologia.
+- Technika AI: Voice AI (rozumiana szeroko jako AI przetwarzające dźwięk: rozpoznawanie, klasyfikacja, lokalizacja źródeł dźwięku).
+
+Nasza grupa w sesji brainwritingu wybrała pomysł „Słuchacz lasu”:
+Rozstawione w lesie mikrofony nasłuchują otoczenia i rozpoznają odgłosy zwierząt, co pozwala szacować liczebność populacji i zarys ich terytoriów. Dźwięk w lesie niesie się dalej niż sięga wzrok — kamera nie wykryje zwierzęcia zasłoniętego drzewami, mikrofon je usłyszy. System wykrywa też anomalie: odgłosy nielegalnej wycinki i pożaru. Problem, który rozwiązujemy: monitorowanie kondycji i dobrostanu lasu jest kosztowne.
+
+Celowo nie podajemy naszego planu realizacji — Twój plan zostanie porównany z naszym, więc ma powstać niezależnie.
+
+Praca będzie oceniana według kryteriów: oryginalność (nieoczywisty, ale realistyczny sposób rozwiązania), skuteczność i szansa powodzenia wdrożenia, jakość opisu. Odbiorcą jest prowadząca przedmiot — ekspertka AI, nie leśnik ani inwestor — więc tekst ma być precyzyjny i zrozumiały bez żargonu branżowego.
+</kontekst>
+
+<zadanie>
+Opracuj kompletną, zwięzłą koncepcję wdrożenia „Słuchacza lasu” na rynku polskim i zapisz ją do pliku work/mikolajm/output.md (nadpisz, jeśli istnieje). Dokument ma obejmować:
+1. Problem — skala i koszt obecnego monitorowania lasów w Polsce, poparte danymi.
+2. Rozwiązanie i architektura — sprzęt w terenie, zasilanie, łączność w lesie bez zasięgu, przetwarzanie na urządzeniu vs w chmurze, modele audio, sposób szacowania populacji i terytoriów z dźwięku.
+3. Plan realizacji krok po kroku — MVP, pilotaż, skalowanie; dla każdego etapu: cel, czas, koszt, kryterium przejścia dalej.
+4. Model biznesowy — kto płaci (np. Lasy Państwowe, parki narodowe, GDOŚ, firmy z obowiązkami raportowania środowiskowego), za co, źródła finansowania (np. NFOŚiGW, LIFE, Horyzont Europa).
+5. Koszty — szacunek CAPEX/OPEX na hektar lub na czujnik.
+6. KPI — jak zmierzymy, że system działa (np. czułość wykrywania pił, czas reakcji na pożar, zgodność szacunków populacji z liczeniem tradycyjnym).
+7. Ryzyka i ograniczenia — techniczne, środowiskowe, prawne (RODO przy przypadkowym nagraniu ludzi, przepisy ochrony przyrody, zgody na montaż), wraz ze sposobami ich ograniczenia.
+8. Konkurencja i wyróżnik — istniejące rozwiązania akustycznego monitoringu i czym się od nich odróżniamy.
+
+Przy każdej sekcji oceń krótko, co w niej jest „nieoczywiste, ale realistyczne” — to główne kryterium oceny, więc ma być widoczne, a nie domyślne.
+</zadanie>
+
+<workflow>
+Działaj autonomicznie, bez zadawania mi pytań — wynik ma powstać w jednym przebiegu, żeby dało się go odtworzyć i wkleić do raportu. Gdy coś jest niejasne, przyjmij rozsądne założenie i zapisz je jawnie.
+
+Faza 0 — Plan.
+Spisz założenia, podział pracy między podagentów i kryteria akceptacji dokumentu końcowego (patrz <kryteria_akceptacji>). Plan trzymaj w pamięci roboczej; trafi do aneksu w skróconej formie.
+
+Faza 1 — Research (5 podagentów uruchomionych równolegle, w jednej wiadomości).
+Każdy podagent dostaje pełny <kontekst>, swój wycinek zadania i polecenie zwrócenia zwięzłej notatki (do ok. 500 słów) z tezami, liczbami i źródłami. Każdy może korzystać z wyszukiwania w internecie i musi podawać źródła; każdą liczbę oznacza jako [fakt + źródło] albo [szacunek + uzasadnienie]. Role:
+  a) Bioakustyk/ekolog — które gatunki i zjawiska da się wiarygodnie wykrywać dźwiękiem w polskich lasach, metodyka szacowania liczebności i terytoriów z danych akustycznych, ograniczenia (sezonowość, gatunki ciche).
+  b) Inżynier IoT/edge — sensory, rozmieszczenie i zasięg mikrofonów, zasilanie, łączność (np. LoRaWAN, satelita), odporność na warunki (zima, wilgoć, zwierzęta, kradzież), koszt jednostkowy.
+  c) Specjalista ML audio — modele i dane treningowe (istniejące modele bioakustyczne, dostępne zbiory nagrań), wykrywanie pił, maszyn i ognia, zarządzanie fałszywymi alarmami, co liczyć na urządzeniu, a co w chmurze.
+  d) Analityk biznesowy rynku polskiego — klient i decydent zakupowy, model przychodu, koszty, finansowanie publiczne i unijne, konkurencja.
+  e) Prawnik/etyk — RODO i nagrania ludzi w lesie, prawo ochrony przyrody i lasów, zgody na instalację, odpowiedzialność za przeoczony pożar.
+Dlaczego równolegle i osobno: każda dziedzina wymaga innego researchu, a osobne konteksty zapobiegają temu, żeby jedna perspektywa zdominowała pozostałe.
+
+Faza 2 — Synteza.
+Scal notatki w jeden spójny dokument zgodny z <format_wyjścia>. Rozstrzygaj sprzeczności między podagentami jawnie (jedno zdanie: co wybrałeś i dlaczego). Usuń powtórzenia — limit słów jest twardy.
+
+Faza 3 — Weryfikacja (4 niezależnych recenzentów uruchomionych równolegle).
+Każdy recenzent dostaje TYLKO szkic dokumentu i <kryteria_akceptacji> — bez notatek z fazy 1 i bez Twojego rozumowania. Dzięki temu ocenia tekst tak, jak przeczyta go prowadząca, a nie potwierdza Twoich założeń. Role:
+  a) Sceptyczny inwestor — dlaczego ten biznes się nie uda, gdzie model przychodu jest naiwny.
+  b) Praktyk-leśnik — czy to przetrwa w realnym lesie i realnej organizacji (sezon, serwis, ludzie, procedury).
+  c) Fact-checker — weryfikuje w internecie liczby i źródła; wskazuje twierdzenia bez pokrycia lub sprzeczne ze źródłem.
+  d) Oceniający według kryteriów przedmiotu — punktuje oryginalność (0–10), wykonalność (0–10) i jakość opisu (0–10), z uzasadnieniem.
+Każdy recenzent zwraca listę uwag posortowaną według wagi: KRYTYCZNA / ISTOTNA / DROBNA, każda z konkretnym miejscem w tekście i propozycją poprawki.
+
+Faza 4 — Poprawka (maksymalnie 2 pętle).
+Do każdej uwagi KRYTYCZNEJ musisz się odnieść: popraw tekst albo w jednym zdaniu uzasadnij odrzucenie. Uwagi ISTOTNE uwzględnij, jeśli mieszczą się w limicie słów. Jeśli po pierwszej poprawce zostały nierozwiązane uwagi krytyczne, uruchom ponownie tylko tych recenzentów, którzy je zgłosili. Po drugiej pętli kończysz niezależnie od wyniku — nierozwiązane kwestie trafiają do sekcji ryzyk. Limit pętli jest po to, żeby proces miał koniec i koszt możliwy do przewidzenia.
+
+Faza 5 — Zapis.
+Zapisz dokument końcowy z aneksem do work/mikolajm/output.md. Na koniec wypisz w czacie tylko ścieżkę pliku, liczbę słów części głównej i oceny recenzenta (d) po ostatniej pętli.
+</workflow>
+
+<kryteria_akceptacji>
+- Wszystkie 8 sekcji z <zadanie> są obecne; każda zawiera ocenę „nieoczywiste, ale realistyczne”.
+- Każda liczba ma oznaczenie [fakt + źródło] lub [szacunek + uzasadnienie]; brak zmyślonych źródeł — jeśli nie znalazłeś źródła, piszesz „szacunek”.
+- Rozwiązanie opiera się na Voice AI jako głównej technice; inne techniki mogą być tylko pomocnicze i muszą być nazwane jako takie.
+- Plan realizacji ma etapy z czasem, kosztem i kryterium przejścia.
+- Część główna ma maksymalnie 2500 słów. Zwięzłość jest wymaganiem: dokument trafia do raportu, który czyta prowadząca, więc każde zdanie ma nieść informację.
+- Język polski, bez żargonu niewyjaśnionego przy pierwszym użyciu.
+</kryteria_akceptacji>
+
+<format_wyjścia>
+Plik Markdown work/mikolajm/output.md o strukturze:
+
+# Słuchacz lasu — koncepcja wygenerowana przez workflow wieloagentowy
+
+> Model: <nazwa i wersja modelu> · Data: <RRRR-MM-DD> · Narzędzie: Claude Code · Podagenci research: 5 · Recenzenci: 4 · Pętle poprawek: <liczba>
+
+## Założenia
+(lista jawnie przyjętych założeń, maks. 6 punktów)
+
+## 1. Problem
+## 2. Rozwiązanie i architektura
+## 3. Plan realizacji
+(tabela: Etap | Cel | Czas | Koszt | Kryterium przejścia)
+## 4. Model biznesowy
+## 5. Koszty
+## 6. KPI
+## 7. Ryzyka i ograniczenia
+(tabela: Ryzyko | Wpływ | Sposób ograniczenia)
+## 8. Konkurencja i wyróżnik
+## Źródła
+(numerowana lista; w tekście odwołania w formie [1], [2])
+
+## Aneks: Dziennik weryfikacji
+(maks. 1 strona: tabela Recenzent | Najważniejsze uwagi | Co zmieniono / dlaczego odrzucono; oceny recenzenta (d) przed i po poprawkach)
+
+Używaj nagłówków dokładnie jak wyżej, prostych tabel Markdown i list — bez HTML, bez emoji — żeby dokument dał się bez poprawek wkleić do Worda.
+</format_wyjścia>

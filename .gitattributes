@@ -1,0 +1,5 @@
+# PDF jest generowany przez workflow — git traktuje go jako plik binarny, bez diffów.
+*.pdf binary
+docs/final_doc.pdf linguist-generated=true
+*.pptx binary
+*.docx binary

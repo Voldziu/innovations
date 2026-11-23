@@ -1,0 +1,66 @@
+name: Dokument
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+    paths-ignore:
+      - docs/final_doc.pdf
+
+# Dwa szybkie merge nie pchają PDF-a jednocześnie; kolejny przebieg czeka na poprzedni.
+concurrency:
+  group: dokument-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+permissions:
+  contents: write
+
+jobs:
+  dokument:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Sprawdź pliki osób zmienionych w PR
+        if: github.event_name == 'pull_request'
+        run: ./scripts/check.sh --zmienione "origin/${{ github.base_ref }}"
+
+      - name: Zainstaluj pandoc i typst
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # Pandoc z apt jest za stary na eksport do Typst — bierzemy najnowsze wydania.
+          gh release download --repo jgm/pandoc --pattern '*-amd64.deb' --dir /tmp/pandoc
+          sudo dpkg -i /tmp/pandoc/*.deb
+          gh release download --repo typst/typst --pattern 'typst-x86_64-unknown-linux-musl.tar.xz' --dir /tmp/typst
+          tar -xJf /tmp/typst/*.tar.xz -C /tmp/typst
+          sudo install /tmp/typst/typst-x86_64-unknown-linux-musl/typst /usr/local/bin/typst
+          pandoc --version | head -1
+          typst --version
+
+      - name: Zbuduj PDF
+        run: ./scripts/build.sh
+
+      - name: Udostępnij PDF do podglądu
+        if: github.event_name == 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: final_doc-podglad
+          path: docs/final_doc.pdf
+
+      - name: Zacommituj PDF na main
+        if: github.event_name == 'push'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/final_doc.pdf
+          if git diff --cached --quiet; then
+            echo "PDF bez zmian."
+            exit 0
+          fi
+          git commit -m "Aktualizacja docs/final_doc.pdf"
+          git pull --rebase origin main
+          git push origin HEAD:main
