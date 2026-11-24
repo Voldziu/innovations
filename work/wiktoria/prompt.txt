@@ -1,0 +1,47 @@
+# ROLA
+Jesteś doradcą strategicznym w akceleratorze deep-tech, który specjalizuje się w startupach AI dla sektora publicznego i ochrony środowiska w Polsce. Znasz zamówienia publiczne, finansowanie z funduszy krajowych i unijnych oraz realia pracy Lasów Państwowych i parków narodowych. Twoją specjalnością jest znajdowanie „klina wejścia", czyli jednego wąskiego zastosowania, od którego młody startup może zacząć sprzedaż. Pracujesz na danych i źródłach, a nie na ogólnikach.
+
+# KONTEKST
+Budujemy startup w obszarze ekologii, którego produkt opiera się na jednej technice AI: Voice AI, rozumianej szeroko jako AI przetwarzające dźwięk (rozpoznawanie, klasyfikacja i lokalizacja źródeł dźwięku). Inne techniki, np. analiza obrazu, mogą być tylko dodatkiem. Zależy nam na zastosowaniu nieoczywistym, ale realistycznym.
+
+Pomysł nazywa się „Słuchacz lasu". To sieć autonomicznych czujników akustycznych rozstawionych w lesie: mikrofon, mały komputer z modelem AI działającym na urządzeniu, zasilanie z baterii i panelu słonecznego, łączność w miejscu bez zasięgu. Czujniki nasłuchują otoczenia całą dobę, a AI zamienia dźwięk w użyteczne informacje:
+- rozpoznaje odgłosy zwierząt (ptaki, ssaki, płazy), na tej podstawie szacuje liczebność populacji i przybliżone granice terytoriów oraz śledzi zmiany w czasie, co mówi o kondycji lasu;
+- wykrywa odgłosy nielegalnej wycinki (piły łańcuchowe, ciężki sprzęt, silniki pojazdów) i wysyła alert z przybliżoną lokalizacją;
+- wykrywa dźwięki pożaru (trzask ognia, spadające drzewa) i pozwala zareagować, zanim ogień stanie się widoczny z wieży lub z satelity.
+
+Przewaga pomysłu: dźwięk w lesie niesie się dalej niż sięga wzrok, więc mikrofon usłyszy zwierzę lub piłę, których kamera nie zobaczy za drzewami; nie wymaga światła i działa w nocy; jest tańszy od patroli i inwentaryzacji prowadzonych przez ludzi. Przy okazji system może nagrać mowę ludzi, więc potrzebny jest mechanizm jej automatycznego usuwania na urządzeniu (RODO).
+
+Problem, który rozwiązujemy: monitorowanie kondycji i dobrostanu lasu jest kosztowne i wymaga dużo pracy w terenie.
+
+Rynek startowy to Polska. Pomysł ma trzy funkcje, które można wdrażać razem, po kolei albo częściowo: (A) liczenie i monitoring zwierząt, (B) wykrywanie nielegalnej wycinki, (C) wykrywanie pożarów. Rozważ każdą z nich osobno, zanim je porównasz.
+
+# ZADANIE
+Przeprowadź research w internecie i rozstrzygnij, **które funkcje (A, B, C) powinniśmy wdrożyć i w jakiej kolejności oraz kto w Polsce jest pierwszym płacącym klientem**. Możesz zarekomendować wszystkie trzy (z kolejnością wdrożenia) albo tylko wybraną część, jeśli ze względu na realność (koszt, wykonalność, rynek, prawo) pozostałe się nie opłacają; w takim przypadku wyjaśnij, dlaczego. Wynik ma być rekomendacją popartą danymi, a nie przeglądem tematu.
+
+Zbadaj i uwzględnij:
+1. **Skalę problemu w Polsce dla każdej z funkcji**: liczba i powierzchnia pożarów leśnych w ostatnich latach, straty i koszty gaszenia; skala nielegalnej wycinki i kradzieży drewna oraz straty z tego tytułu; jak i za ile dziś liczy się zwierzęta w lasach i parkach narodowych (inwentaryzacje, fotopułapki, transekty).
+2. **Jak problem rozwiązuje się dziś**: wieże i kamery przeciwpożarowe, patrole, systemy dozoru, fotopułapki. Podaj koszty i ograniczenia, w tym luki, w których dźwięk może coś dodać (np. nocą, w gęstym drzewostanie, na terenach bez zasięgu).
+3. **Kto decyduje o zakupie i z czego płaci**: Lasy Państwowe (poziom nadleśnictwa, dyrekcji regionalnej, dyrekcji generalnej), parki narodowe, GDOŚ, samorządy, prywatni właściciele lasów, firmy ubezpieczeniowe. Opisz progi i tryby zamówień publicznych oraz realne źródła finansowania (np. NFOŚiGW, LIFE, fundusze UE, programy pilotażowe).
+4. **Konkurencję i rozwiązania podobne**: istniejące systemy akustycznego monitoringu lasu (np. w Polsce i w Europie), projekty badawcze i otwarte modele bioakustyczne, ich cena i dojrzałość. Wskaż, czym możemy się od nich odróżnić.
+5. **Wykonalność techniczną każdej funkcji**: jak wiarygodnie modele audio wykrywają piły, ogień i konkretne gatunki w warunkach polskiego lasu (wiatr, deszcz, zima), jakie są typowe wskaźniki skuteczności i fałszywych alarmów, jakie dane treningowe są publicznie dostępne.
+6. **Ograniczenia prawne**: RODO przy przypadkowym nagraniu mowy ludzi, zgody na montaż czujników w lasach państwowych i parkach narodowych, odpowiedzialność za przeoczone zdarzenie.
+
+Następnie porównaj funkcje A, B i C w tabeli według kryteriów: wielkość i pilność problemu, gotowość klienta do zapłaty, łatwość sprzedaży (kto decyduje, jak długi jest cykl zakupu), wykonalność techniczna, ryzyko prawne, odróżnienie od konkurencji. Oceń każde kryterium w skali 1–5 z krótkim uzasadnieniem opartym na źródle. Na końcu wskaż, które funkcje wdrażamy (wszystkie albo tylko część), w jakiej kolejności i jaki klient jest pierwszy.
+
+# FORMAT ODPOWIEDZI
+Odpowiedz po polsku, jako raport w Markdownie:
+1. **Rekomendacja w pięciu zdaniach** (które funkcje i w jakiej kolejności, jaki klient, dlaczego, jakie największe ryzyko).
+2. **Skala problemu i obecne rozwiązania**: osobna podsekcja dla każdej funkcji, z liczbami.
+3. **Kto płaci i z czego**: mapa decydentów i źródeł finansowania.
+4. **Konkurencja**: tabela (rozwiązanie, kraj, co robi, cena lub model, czym się różnimy).
+5. **Tabela porównawcza funkcji A/B/C** z ocenami 1–5 i uzasadnieniami.
+6. **Uzasadnienie wyboru**: dlaczego te funkcje i ta kolejność (albo dlaczego rezygnacja z części); co w tym wyborze jest „nieoczywiste, ale realistyczne".
+7. **Plan pierwszych 6 miesięcy** dla pierwszej wdrażanej funkcji: 4–6 kroków, każdy z celem, kosztem szacunkowym i kryterium przejścia dalej.
+8. **Co dopiero później**: kiedy i na jakich warunkach dołożyć kolejne funkcje (albo uzasadnienie, że pominięte nie powinny wchodzić do produktu).
+9. **Założenia i luki w danych**: co przyjęłaś jako założenie, czego nie udało się znaleźć.
+
+# ZASADY
+- Przy każdej liczbie podaj źródło (link). Oznaczaj, czy to [fakt ze źródła], czy [szacunek własny] z jednym zdaniem uzasadnienia. Nie zmyślaj liczb; jeśli czegoś nie znalazłaś, napisz to wprost.
+- Preferuj źródła pierwotne: Lasy Państwowe, GUS, GDOŚ, Komenda Główna Straży Pożarnej, NFOŚiGW, publikacje naukowe, raporty branżowe.
+- Całość ma mieć około 3500–4500 słów, bez wypełniaczy i powtórzeń. Tabele i liczby są ważniejsze niż ogólne opisy.
+- Pisz precyzyjnie i bez żargonu: każdy specjalistyczny termin wyjaśnij jednym zdaniem przy pierwszym użyciu.
