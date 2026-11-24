@@ -1,93 +1,94 @@
-> Model: Claude Opus 5.5 (claude-opus-5-5) · Data: 2026-11-23
+> Model: Claude Opus 5.5 (claude-opus-5-5), z wyszukiwarką internetową · Data: 2026-11-23
 
-# Stetoskop Leśny
+# Słuchacz lasu: ocena i poprawiony plan
 
-## 1. Pięć kierunków
+## Założenia
 
-Pierwszy pomysł, który przyszedł mi do głowy, był oczywisty i go odrzuciłem: akustyczny monitoring bioróżnorodności ptaków (takie narzędzia jak BirdNET już działają) oraz wykrywanie pił łańcuchowych w lesie (to robi Rainforest Connection).
+- Nadleśnictwa kupują usługi samodzielnie. Zamówienie poniżej progu ustawy Pzp, który od 1 stycznia 2026 r. wynosi 170 000 zł netto [14], można zlecić bez przetargu. Pierwsza sprzedaż powinna więc zmieścić się w tej kwocie.
+- Lasy Państwowe zarządzają około 7,6 mln ha i mają 429 nadleśnictw [18]. Centralne wdrożenie w całych LP wymagałoby przetargu i lat starań, dlatego nie traktujemy go jako pierwszego kroku.
+- Nie znam aktualnych, ogólnokrajowych danych o kradzieży drewna po 2020 r. Opieram się na starszych raportach LP.
+- Status prawny cięć w okresie lęgowym ptaków jest sporny. Nie mam źródła, które potwierdzałoby obecne wewnętrzne zasady LP.
+- Zespół nie ma doświadczenia w budowie sprzętu terenowego. Zakładam zakup gotowych rejestratorów zamiast własnej elektroniki.
 
-1. **Kornik drukarz w żywych świerkach.** Kontaktowy czujnik przykładany do pnia słucha żerowania chrząszczy i larw pod korą. Używa go leśniczy w drzewostanach świerkowych w Beskidach i Sudetach. Klientem są nadleśnictwa.
-2. **Stres suszy młodych drzew miejskich.** Czujnik ultradźwiękowy przy pniu wychwytuje emisje kawitacyjne, które pojawiają się w przewodzących wodę tkankach drzewa przy niedoborze wody. Klientem są miejskie zarządy zieleni, którym usychają świeżo posadzone drzewa.
-3. **Akustyczny indeks życia glebowego.** Sondy wbijane w glebę nagrywają dźwięki fauny glebowej, czyli ruch i żerowanie dżdżownic oraz stawonogów. Klientem są gospodarstwa rolnictwa regeneracyjnego i weryfikatorzy praktyk rolno-środowiskowych.
-4. **Przywabianie ptaków kolonijnych (generowanie dźwięku).** Głośniki na nowo usypanych, bezpiecznych wyspach lęgowych odtwarzają wygenerowany, zmienny pejzaż dźwiękowy kolonii rybitw, a mikrofony sprawdzają, czy ptaki się osiedlają. Klientem są zarządcy zbiorników, RDOŚ i organizacje ochrony przyrody.
-5. **Nielegalne zrzuty do rzek.** Hydrofony przy wylotach kanałów i rowów wykrywają nocną pracę pomp i nagły przepływ, które nie zgadzają się z pozwoleniem wodnoprawnym. Klientem są Wody Polskie i inspekcja ochrony środowiska.
+## 1. Co już istnieje
 
-## 2. Wybór
+**Wykrywanie piły.** Rainforest Connection (RFCx) sprzedaje Guardian 3. To czujnik na energię słoneczną z trzema mikrofonami i łącznością przez Starlink. Rozpoznaje piły, silniki pojazdów, strzały i psy myśliwskie w promieniu od 50 do 1500 m, zależnie od źródła dźwięku [1]. Huawei, który współtworzył model, podaje, że wykrywa on 96% zdarzeń z piłą [2]. To dane od dostawcy i nie wiadomo, czy chodzi o czułość, czy o precyzję. Wczesne wersje myliły piłę z brzęczeniem komarów [2].
 
-| Kierunek | Nieoczywistość | Pilotaż w rok | Ktoś zapłaci | Dźwięk daje coś, czego nie da kamera ani człowiek | Kto już to robi |
-|---|---|---|---|---|---|
-| 1. Kornik | 4 | 4 | 4 | Tak: żerowanie pod korą słychać, zanim pojawią się widoczne objawy, a trociny zmywa deszcz | Badania nad akustyką korników i kózkowatych (m.in. grupa R. Hofstettera z Northern Arizona University, prace USDA nad larwami w drewnie). Gotowego produktu dla kornika drukarza nie znam, trzeba to sprawdzić. Dla ryjkowca palmowego istnieje produkt Agrint IoTree |
-| 2. Susza drzew | 5 | 2 | 3 | Częściowo: czujniki wilgotności gleby dają podobną informację taniej | Badania: Khait i in., Cell 2023 (dźwięki roślin w stresie); emisje kawitacyjne są znane w fizjologii roślin od dziesięcioleci. Produktu nie znam |
-| 3. Gleba | 5 | 3 | 2 | Tak: tego życia nie widać bez rozkopywania gleby | Projekt Sounding Soil (Szwajcaria) i prace badawcze. Produktu nie znam |
-| 4. Ptaki kolonijne | 3 | 3 | 2 | Tak: dźwięk przywabia ptaki, czego kamera nie zrobi | Przywabianie odtwarzaniem głosów jest stosowane od dawna (Project Puffin, S. Kress). Generowanie zmiennych nagrań przez AI to mały wkład |
-| 5. Zrzuty | 4 | 3 | 3 | Częściowo: czujniki chemiczne mierzą samo zanieczyszczenie, dźwięk pokazuje tylko, kiedy był zrzut | Nie wiem |
+**Bioróżnorodność w Polsce.** Ten sam RFCx wspólnie z Huawei i Białowieskim Parkiem Narodowym rozstawił 70 rejestratorów AudioMoth i 3 Guardiany. Pracowały od 27 marca do 9 czerwca 2023 r. Zebrały około 1,08 mln minutowych nagrań, wykryły 56 gatunków, w tym wilka, i posłużyły do budowy modeli występowania (occupancy) dla 17 gatunków ptaków [3][4]. **Nasz główny moduł istnieje więc już w Polsce, u konkurenta z globalnym partnerem.**
 
-**Wybór: kierunek 1.** Kornik drukarz to w Polsce problem na dużą skalę, a nadleśnictwa mają już budżet i obowiązek kontrolowania zasiedlonych drzew, więc wiadomo, kto decyduje i z czego płaci. Nagranie dźwięku z pnia telefonem z tanim czujnikiem kontaktowym da się zbudować małym zespołem w kilka miesięcy, a ten sezon rójki pozwala zrobić pilotaż w 2027 roku. Według mojej wiedzy nikt nie sprzedaje takiego narzędzia dla kornika drukarza, więc nie przenosimy do Polski cudzego produktu (to trzeba potwierdzić w pierwszym miesiącu).
+**Narzędzia.** BirdNET to darmowy klasyfikator ptaków. W lasach Dolnej Saksonii średnia precyzja wyniosła 0,70, a czułość 0,64 [5b]. Dla wybranych gatunków leśnych precyzja sięga 88–93% [5a]. AudioMoth kosztuje około 80–100 USD [6]. Przy nagrywaniu 30 s co 5 min działa na baterii do 115 dni [19].
 
-## 3. Problem i klient
+**Pożary.** LP mają ponad 700 punktów obserwacyjnych, a utrzymanie systemu przeciwpożarowego kosztowało 158 mln zł w 2024 r. [9]. Polski SmokeD wykrywa dym kamerami i ma kontrakt z LP [8]. Dryad Silvanet wykrywa tlący się ogień czujnikami gazów i wysłał ponad 30 000 czujników [7]. Akustyczne wykrywanie pożaru jest na etapie badań (infradźwięki z kontrolowanych wypaleń) [16]. Nie ma tu przewagi do zdobycia.
 
-Kornik drukarz zasiedla świerki osłabione suszą. Nowe pokolenie wylatuje po kilku tygodniach [szacunek: 6–10 tygodni zależnie od temperatury] i atakuje drzewa sąsiednie. Jeśli drzewo usunie się albo okoruje przed wylotem, ognisko przestaje się rozszerzać. Dziś zasiedlone drzewa szuka się wzrokowo: po trocinach, wyciekach żywicy i otworach wejściowych. Na wczesnym etapie, kiedy korona jest jeszcze zielona, łatwo te objawy przeoczyć, zwłaszcza po deszczu.
+**Liczebność.** Szacowanie liczby osobników z samego dźwięku jest trudne. Przy cietrzewiowatych, np. głuszcu, liczba odezwań na toku koreluje z liczbą kogutów, ale nie ma zwalidowanego przelicznika [12]. U jeleni da się policzyć ryczące byki, ale nie łanie i cielęta [17]. Obietnica „liczebności i granic terytoriów” jest dziś nierealna. Realne jest określenie obecności lub braku gatunku i trendu aktywności.
 
-**Klient:** nadleśnictwa Lasów Państwowych z dużym udziałem świerka, na start Beskidy, Sudety i północny wschód. O zakupie decyduje nadleśniczy, a rekomendację przygotowuje specjalista do spraw ochrony lasu. Na poziomie RDLP ma wpływ wydział ochrony lasu. Ważnym partnerem merytorycznym jest Instytut Badawczy Leśnictwa, który zajmuje się prognozowaniem zagrożeń. Później dochodzą prywatni właściciele lasów i rynki czeski, słowacki i niemiecki.
+**Co jest naprawdę nowe.** Ani sam sprzęt, ani klasyfikator. Proponuję przesunięcie: **Słuchacz lasu jako akustyczna kontrola przed zabiegiem gospodarczym.** Przed cięciem w okresie lęgowym (1 marca – 15 października [10]) rejestratory pracują 5–7 dni na wydzieleniu przeznaczonym do zabiegu. System zwraca raport: czy wykryto gatunki wymagające ochrony (np. dzięcioł białogrzbiety, sóweczka, włochatka, bocian czarny) i gdzie. Polska przegrała przed TSUE sprawę domniemania, że gospodarka leśna zgodna z dobrą praktyką nie narusza przepisów o ochronie przyrody [11]. Udokumentowana kontrola przyrodnicza ma więc wartość prawną i wizerunkową. Piła zostaje jako moduł drugi i nieoczywisty: alarm tylko o cięciu **poza wydzieleniami, na które wystawiono zlecenie**. Bez tego w lesie gospodarczym każdy legalny zrąb wywoła alarm.
 
-## 4. Efekt dla przyrody
+## 2. Pre-mortem
 
-Produkt ogranicza **rozprzestrzenianie się ognisk kornika**, a przez to zamieranie kolejnych świerków i powstawanie dużych powierzchni wylesionych po cięciach sanitarnych. Przy wczesnym wykryciu wystarcza wyciąć pojedyncze drzewa zamiast całych płatów.
+1. **Konkurent był pierwszy, a my nie mieliśmy wyróżnika.** RFCx i Huawei dawały park narodowy za darmo w ramach CSR [3]. Spowodował to krok 1, który pytał o metody i koszty, a nie o konkurencję. Pomysłu nie przesunięto.
+2. **Nie było klienta z budżetem.** Krok 8 zakładał, że LP sfinansują wdrożenie. Centralna decyzja wymagała przetargu, a nadleśniczy nie miał pozycji w planie finansowym na „słuchanie zwierząt”. Kroku 8 nie poprzedziło pytanie o płatność w kroku 1.
+3. **Alarmy o pile były bezużyteczne.** W lesie gospodarczym piły pracują codziennie legalnie. W 2012 r. LP odnotowały 6451 kradzieży drewna [13], czyli rzadkie zdarzenia rozproszone po 7,6 mln ha [18]. Na jedną prawdziwą kradzież przypadały setki alarmów o legalnej pracy [szacunek]. Spowodowały to kroki 3 i 6, które nie łączyły detekcji z planem cięć.
+4. **Sprzęt pochłonął czas i pieniądze.** Kondensacja wilgoci, kradzieże czujników, za mało słońca pod okapem drzewostanu. Spowodował to krok 4, czyli własny prototyp zamiast gotowych AudioMoth [6].
+5. **Obietnica „liczebności” nie przeszła porównania.** Pilotaż z kroku 7 porównał nasze liczby z pędzeniami próbnymi. Akustyka nie daje liczby osobników [12][17], więc wynik uznano za porażkę. Spowodował to sposób zdefiniowania sukcesu w krokach 7 i 3.
 
-Miary w pilotażu (oddziały z urządzeniem kontra oddziały kontrolne o podobnym drzewostanie):
-- odsetek zasiedlonych drzew wykrytych przed wylotem nowego pokolenia, sprawdzony przez okorowanie próby drzew przeznaczonych już do usunięcia (to miara główna),
-- liczba nowo zasiedlonych drzew w promieniu [szacunek: 50 m] od ognisk z poprzedniego pokolenia,
-- liczba drzew usuniętych na jedno ognisko.
+## 3. Ocena naszego planu
 
-Uczciwie: jeden sezon może nie wystarczyć, żeby wykazać różnicę w rozprzestrzenianiu się ognisk. Pewnym wynikiem jednego sezonu będzie tylko miara główna.
+1. **Wywiady: zmienić.** Pytać o konkretną decyzję i budżet: kto i za ile dziś robi inwentaryzację przyrodniczą przed zabiegiem. Cel: 15 rozmów i co najmniej 3 deklaracje pilotażu płatnego poniżej progu Pzp.
+2. **Zbieranie i oznaczanie danych: zmienić.** Nie zaczynać od zera. Wziąć BirdNET jako bazę i oznaczyć tylko próbę walidacyjną (około 2000 fragmentów [szacunek]) dla 10 gatunków docelowych.
+3. **Trening modelu: zmienić.** Dostrajać BirdNET dla rzadkich gatunków polskich i trenować model „piła/harwester kontra tło”. Miarą jest precyzja i czułość na gatunek, a nie „działa”.
+4. **Własny prototyp czujnika: usunąć na start.** Kupić 20 AudioMoth (około 2000 USD [6]). Własny sprzęt budować dopiero przy module piły, który wymaga łączności w czasie rzeczywistym.
+5. **Test zasięgu: zostawić.** Dodać mierzalny wynik: zasięg wykrycia piły i 5 gatunków przy odtwarzaniu nagrań z głośnika na odległość 50–500 m.
+6. **Aplikacja z mapą: zmienić.** Na start wystarczy raport PDF na wydzielenie i warstwa do importu w GIS nadleśnictwa. Powiadomienia dopiero przy module piły.
+7. **Pilotaż: zmienić.** Porównywać z ornitologiem w terenie (wykrycie gatunku na wydzieleniu), a nie z liczeniem zwierzyny. Pilotaż ma być płatny.
+8. **Finansowanie przez LP i granty: zmienić.** Sprzedawać pojedynczym nadleśnictwom, parkom narodowym i firmom robiącym inwentaryzacje. Granty traktować jako uzupełnienie, nie jako model biznesowy.
+9. **Zgody i RODO: zmienić i przenieść na początek.** Głos jest daną osobową [15]. Filtr mowy na urządzeniu i usuwanie fragmentów przed zapisem trzeba mieć przed pierwszym nagraniem, nie po pilotażu.
+10. **Skalowanie jako abonament: zostawić, ale zmienić jednostkę.** Opłata za kontrolę wydzielenia lub za sezon, a nie abonament sprzętowy.
 
-## 5. Jak to działa
+**Czego brakuje:** analizy konkurencji (RFCx w Białowieży), ceny i modelu płatności, łączenia z planem cięć, procedury walidacji przez eksperta, budżetu i harmonogramu, ochrony czujników przed kradzieżą oraz kryteriów porzucenia lub zmiany kierunku.
 
-- **Nagranie:** piezoelektryczny czujnik kontaktowy z przedwzmacniaczem, podłączony do smartfona przez USB-C [szacunek: koszt części 150–300 zł]. Leśniczy przykłada go do pnia na wysokości 1–2 m na 60–90 sekund. Do tego krótkie nagranie tła z powietrza, które pomaga odfiltrować wiatr i deszcz.
-- **Model:** mały klasyfikator działający w telefonie, bez zasięgu. Wejściem jest spektrogram, a model odróżnia impulsy żerowania w łyku od stukania dzięcioła, trzasków od wiatru, kroków i dotyku dłoni. Wynik to prawdopodobieństwo zasiedlenia i ocena jakości nagrania. Nie wiem, czy da się odróżnić kornika drukarza od współwystępującego rytownika pospolitego. Na początek zakładamy klasę „żerowanie pod korą” bez rozróżniania gatunków.
-- **Realna skuteczność:** nie znam terenowych wyników dla tego gatunku. Próg sukcesu prototypu ustawiam na czułość co najmniej 70% przy swoistości co najmniej 85% [szacunek].
-- **Użytkownik dostaje:** kolor drzewa na mapie (zasiedlone, czyste albo „powtórz pomiar”), współrzędne GPS i listę drzew do usunięcia, którą da się wyeksportować do systemu nadleśnictwa.
+## 4. Poprawiony plan
 
-## 6. Co już istnieje
-
-- **Badania akustyki korników i larw w drewnie** (USA, USDA, Northern Arizona University): pokazują, że sygnał istnieje, ale robiono je głównie w laboratorium i na innych gatunkach. Produktem nie zostały, bo w USA i w Polsce nie było kupca z gotowym procesem i budżetem. Tak przynajmniej oceniam, nie mam tego potwierdzonego.
-- **Agrint IoTree:** stałe czujniki na palmach przeciw ryjkowcowi palmowemu. To inny gatunek i inny model biznesowy, bo czujnik zostaje na drzewie na stałe. W lesie świerkowym czujnik na każdym drzewie byłby za drogi.
-- **Pułapki feromonowe, teledetekcja, psy wyszkolone do wykrywania kornika:** pułapki mierzą tylko liczebność populacji. Satelity i drony widzą drzewo dopiero wtedy, gdy korona zmienia kolor, czyli często po wylocie nowego pokolenia. Psy są skuteczne, ale ich tu nie skalujemy.
-
-**Co robimy inaczej:** budujemy tanie narzędzie ręczne, które wpasowuje się w obchody kontrolne, które leśniczy i tak wykonuje. Model trenujemy na danych z polskich drzewostanów, a etykiety bierzemy z okorowania, nie z oceny wzrokowej. Zdjęcia satelitarne mogą być dodatkiem, który wskazuje, gdzie iść, ale nie są rdzeniem produktu.
-
-## 7. Scenariusz użycia
-
-1. W maju kornik zasiedla świerk na skraju zeszłorocznego ogniska. Korona jest zielona, a trociny zmył deszcz.
-2. Aplikacja wyznacza leśniczemu trasę obchodu wzdłuż skrajów znanych ognisk.
-3. Przy każdym świerku w pasie kontrolnym leśniczy przykłada czujnik. Po około 90 sekundach aplikacja pokazuje wynik albo prosi o powtórzenie pomiaru, jeśli wieje za mocno.
-4. Drzewo z wysokim prawdopodobieństwem zasiedlenia jest oznaczane na mapie. Leśniczy może je sprawdzić, zdejmując mały fragment kory.
-5. Na koniec dnia lista drzew trafia do specjalisty do spraw ochrony lasu.
-6. Specjalista zleca usunięcie albo okorowanie drzew przed wylotem nowego pokolenia, a nadleśniczy zatwierdza zlecenie dla zakładu usług leśnych.
-7. Po 3–4 tygodniach leśniczy sprawdza ponownie pas wokół ogniska.
-
-## 8. Plan realizacji
-
-| Krok | Czas | Warunek przejścia | Jeśli nie jest spełniony |
+| Krok | Czas [szacunek] | Warunek przejścia dalej | Co, jeśli nie jest spełniony |
 |---|---|---|---|
-| Rozmowy z 15 nadleśnictwami i IBL, przegląd literatury i patentów | XII 2026 – I 2027 | Co najmniej 3 nadleśnictwa dają dostęp do drzewostanów i deklarują chęć zapłaty. Nie znaleźliśmy gotowego produktu | Przechodzimy do kierunku 5 lub 2 |
-| Zbiór danych: kłody z zimujących, zasiedlonych drzew i drzewa zdrowe, etykiety z okorowania | II – IV 2027 | Model na odłożonych drzewach osiąga AUC co najmniej 0,85 [szacunek] | Dłuższe nagrania albo stałe czujniki na drzewach pułapkowych. Jeśli to nie pomoże, zamykamy kierunek |
-| Prototyp: 20 zestawów i aplikacja | IV – V 2027 | Pomiar zajmuje do 2 minut na drzewo, a test w terenie spełnia progi z sekcji 5 | Poprawiamy mocowanie czujnika i filtrowanie tła. Pilotaż przesuwamy na drugie pokolenie kornika (lipiec) |
-| Pilotaż w 2–3 nadleśnictwach | V – IX 2027 | Wykrywamy przed wylotem istotnie więcej drzew niż w oddziałach kontrolnych, a nadleśnictwo chce przedłużyć współpracę | Analizujemy, gdzie model zawodzi. Pozycjonujemy produkt jako narzędzie do weryfikacji, a nie do wyszukiwania drzew |
-| Skalowanie: 10–20 nadleśnictw, zamówienia publiczne, Czechy i Słowacja | 2028 | Koszt na hektar niższy niż wartość uratowanego drewna | Zostajemy przy usłudze w modelu „pomiar jako usługa” |
+| 1. 15 wywiadów (nadleśnictwa, parki narodowe, firmy przyrodnicze, RDOŚ) o kontroli przed zabiegiem i jej koszcie | 4 tyg. | Co najmniej 3 podmioty deklarują płatny pilotaż poniżej 170 tys. zł [14] | Zmienić klienta na firmy robiące monitoring Natura 2000 lub programy ochrony głuszca [12] |
+| 2. Test BirdNET na 300 h nagrań publicznych i własnych, 10 gatunków docelowych | 4 tyg. | Precyzja co najmniej 0,8 dla 6 z 10 gatunków przy wybranym progu [5] | Zawęzić listę gatunków albo dostroić model na własnych etykietach |
+| 3. Procedura RODO: filtr mowy przed zapisem, ocena skutków dla ochrony danych | 3 tyg., równolegle | Pozytywna opinia prawnika i odsetek mowy w zapisie poniżej 1% w teście [szacunek] | Nagrywać tylko w oknach świtu i nocy, poza szlakami |
+| 4. 20 AudioMoth na 4 wydzieleniach, test zasięgu z głośnika | 6 tyg. | Wykrycie 5 gatunków testowych z co najmniej 100 m | Zagęścić siatkę i przeliczyć koszt kontroli |
+| 5. Płatny pilotaż: 30 wydzieleń przed zabiegiem, ornitolog na 10 z nich | 1 sezon (marzec–czerwiec) | Zgodność z ornitologiem co najmniej 80% na poziomie wydzielenia i koszt na wydzielenie niższy niż ekspert | Sprzedawać jako narzędzie wspierające eksperta, nie zastępujące go |
+| 6. Moduł piły: porównanie detekcji z wykazem zleceń na cięcie | 3 mies. | Co najmniej 90% alarmów o legalnych cięciach odfiltrowanych przez wykaz zleceń [szacunek] | Zostawić piłę jako dowód w raporcie, bez alarmów w czasie rzeczywistym |
+| 7. Sprzedaż w 5 nadleśnictwach, cennik za wydzielenie lub sezon | 6–12 mies. | Co najmniej 3 klientów kupuje ponownie w drugim sezonie | Przejść na model dla firm przyrodniczych (licencja na oprogramowanie) |
 
-## 9. Model przychodu
+**Jaką szkodę ograniczamy i jak ją zmierzymy.** Produkt ogranicza niszczenie zajętych stanowisk lęgowych gatunków chronionych przez zabiegi prowadzone w okresie lęgowym. W pilotażu zmierzymy:
+- odsetek kontrolowanych wydzieleń, na których wykryto gatunek wymagający ochrony;
+- odsetek z nich, na których zabieg przesunięto lub wyznaczono strefę ochronną;
+- czułość systemu względem ornitologa, czyli ile stanowisk wykrytych przez eksperta pominęliśmy.
 
-- **Kto płaci:** nadleśnictwo, a później prywatni właściciele lasów i zarządcy lasów za granicą.
-- **Za co:** roczna subskrypcja za aplikację, model, mapy i raporty z kontroli, liczona od liczby leśnictw albo hektarów drzewostanów świerkowych. Do tego zestawy czujników sprzedawane albo wliczone w abonament.
-- **Forma:** na początek zamówienia poniżej progu stosowania ustawy Prawo zamówień publicznych (130 000 zł netto), co skraca sprzedaż. Pilotaż jest płatny symbolicznie [szacunek: 5–15 tys. zł]. Druga ścieżka to usługa: nasz zespół albo zakład usług leśnych wykonuje pomiary i fakturuje za przebadane drzewa.
+## 5. Trzy najtańsze testy
 
-## 10. Ryzyka i jak je tanio sprawdzić
+1. **Ktoś zapłaci za kontrolę przed zabiegiem.** Test: jednostronicowa oferta z ceną (np. 1500 zł za wydzielenie [szacunek]) wysłana do 30 nadleśnictw i firm przyrodniczych, a potem rozmowy. Sukces: co najmniej 3 listy intencyjne. Koszt: czas zespołu.
+2. **Gotowy model rozpoznaje polskie gatunki docelowe wystarczająco dobrze.** Test: BirdNET puszczony na publicznych nagraniach (np. xeno-canto) i na kilku godzinach nagranych telefonem w lesie, z ręczną weryfikacją 500 detekcji. Sukces: precyzja co najmniej 0,8 dla większości gatunków [5]. Koszt: zero złotych za sprzęt.
+3. **Detekcję piły da się odróżnić od legalnej pracy.** Test: poprosić jedno nadleśnictwo o wykaz zleceń na cięcie z jednego tygodnia i porównać go z nagraniami z publicznych zbiorów oraz z telefonu przy legalnym zrębie. Sprawdzić, czy lokalizacja i czas wystarczą do odfiltrowania. Sukces: nadleśnictwo potwierdza, że da dostęp do danych o zleceniach. Bez tego moduł piły nie ma sensu.
 
-1. **W terenie nie da się wiarygodnie wychwycić sygnału, bo zagłusza go wiatr, deszcz albo gruba kora.** Test: czujnik za 200 zł i laptop, 30 nagranych kłód i 10 stojących drzew. Spektrogramy ocenia na ślepo człowiek, a wynik porównujemy z okorowaniem. Jeśli człowiek nie widzi różnicy na spektrogramie, model raczej też jej nie zobaczy.
-2. **Narzędzie nie daje przewagi nad okiem leśniczego.** Test: jeden dzień obchodu z leśniczym. Zapisujemy jego decyzje dla 50 drzew i porównujemy z okorowaniem. Jeśli ocena wzrokowa jest trafna w ponad 90% [szacunek] przypadków, produkt nie ma sensu.
-3. **Nadleśnictwo nie kupi albo nie zmieni procedury.** Test: makieta aplikacji, cennik i prośba o list intencyjny albo płatny pilotaż. Brak choćby jednego zobowiązania po 15 rozmowach oznacza, że trzeba zmienić kierunek.
+## Źródła
 
----
-
-Przed wklejeniem do dokumentu sprawdźcie twierdzenie, że nikt nie sprzedaje narzędzia akustycznego dla kornika drukarza. Opieram je na swojej wiedzy, nie na przeglądzie rynku. Liczby oznaczone [szacunek] są moje i nie mają źródła.
+[1] https://rfcx.org/guardian
+[2] https://www.huawei.com/en/huaweitech/cases/rainforest2
+[3] https://rfcx.org/projects/poland
+[4] https://www.telepolis.pl/wiadomosci/huawei-tech4all-bialowieski-park-narodowy
+[5a] https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10459908/
+[5b] https://media.springernature.com/original/springer-static/esm/art%3A10.1007%2Fs10336-025-02307-y/MediaObjects/10336_2025_2307_MOESM1_ESM.docx
+[6] https://groupgets.com/audiomoth
+[7] https://www.itu.int/ew4all/solution/silvanet/
+[8] https://antyweb.pl/smoked-polski-startup-pozary-lasow
+[9] https://www.pap.pl/aktualnosci/jak-dziala-system-ochrony-przeciwpozarowej-w-lasach-monitoring-samoloty-i-siec-0
+[10] https://www.polsatnews.pl/wiadomosc/2017-03-06/lesnicy-moga-nadal-ciac-okres-legowy-po-zmianie-prawa-ich-nie-obowiazuje/
+[11] https://www.rmf24.pl/fakty/polska/news-polska-przegrala-w-tsue-z-ke-ws-zmiany-ustawy-o-lasach,nId,6629904
+[12] https://irep.ntu.ac.uk/id/eprint/36123
+[13] https://bip2.lasy.gov.pl/pl/bip/px_raport_pgl_lp_2012_szk.pdf
+[14] https://www.prawo.pl/biznes/pzp-170000-zl-prog-przetargi,535939.html
+[15] https://nowybiuletyn.uodo.gov.pl/systemy-rozpoznawania-glosu-a-ich-wplyw-na-ochrone-danych-i-prywatnosc/?pdf=1830
+[16] https://www.boisestate.edu/news/2025/02/03/monitoring-fires-with-infrasound/
+[17] https://ibs.bialowieza.pl/wp-content/uploads/2020/09/BORKOWSKI.pdf
+[18] https://lasy.gov.pl/pl/informacje/publikacje/do-poczytania/lasy-panstwowe-w-liczbach-1/lasy-w-liczbach_pl_online.pdf
+[19] https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10256106/
